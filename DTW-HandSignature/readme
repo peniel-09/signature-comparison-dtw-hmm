@@ -1,0 +1,55 @@
+cd .\enfant\
+git init
+git remote add origin https://github.com/{votre_nom_utilisateur}/{nom_du_depot}.git
+git add .
+git commit -m "Initial commit"
+git push -u origin master# Comparaison de Signatures avec DTW et HMM
+
+## Description
+Ce projet vise à comparer des signatures manuscrites en utilisant **Dynamic Time Warping (DTW)** et **Hidden Markov Models (HMM)**. L'objectif est d'analyser la similarité entre deux signatures en extrayant et en normalisant leurs points caractéristiques.
+
+## Fonctionnalités actuelles
+- **Prétraitement des signatures** : binarisation, extraction des points noirs, sous-échantillonnage et normalisation.
+- **Comparaison avec DTW** : alignement des signatures et calcul de la distance entre elles.
+- **Visualisation des signatures** : affichage graphique des signatures avant et après normalisation.
+
+## Prérequis
+- Python 3.x
+- OpenCV (`cv2`)
+- Shapely
+- SciPy
+- fastdtw
+- Matplotlib
+- hmmlearn
+- scikit-learn
+
+Installez les dépendances avec :
+```bash
+pip install opencv-python shapely scipy fastdtw matplotlib hmmlearn scikit-learn
+```
+
+## Utilisation
+1. Placez vos images de signatures dans le répertoire du projet.
+2. Modifiez le code pour spécifier les chemins des fichiers images.
+3. Exécutez le script :
+```bash
+python signature_comparison.py
+```
+4. Observez la distance DTW et les graphiques des signatures traitées.
+
+## Étapes restantes
+- **Amélioration de la précision** :
+  - Ajouter un filtrage avancé pour éviter la perte de détails.
+  - Expérimenter différents paramètres de sous-échantillonnage.
+- **Intégration du modèle HMM** :
+  - Construire et entraîner un modèle HMM pour améliorer la comparaison.
+  - Tester l'efficacité de HMM par rapport à DTW.
+- **Création d'une interface utilisateur** :
+  - Développer une interface graphique ou une API pour faciliter l'utilisation.
+
+## Auteur
+[Péniel](https://github.com/peniel-09)
+
+## Licence
+Ce projet est sous licence MIT.
+
